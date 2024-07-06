@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>Movie Database</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
+        <header class="main-header">
             <h1>Welcome to movie Database</h1>
         </header>
-        <section>
-            <img height="500px" src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg"/>
+        <section class="info-section">
+            <img class="cover-img" src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg"/>
             <h2>Discover popular movies</h2>
             <p>Explore our collection of timeless and blockbusters hits.<br/>
             <i>find movies that captive and inspire</i></p>         
@@ -17,8 +18,8 @@
                 Movie Database is your number 1 destination
             </p>
         </section>
-        <section>
-            <table border="1">
+        <section class ='movie-section'>
+            <table class="movie-table">
                 <tr>
                     <th>Title</th>
                     <th>Director</th>
@@ -39,7 +40,7 @@
                 </tr>
             </table>
         </section>
-        <section>
+        <section class="top-movies-section">
             <h2>Top 5 movies</h2>
             <ol>
                 <li><strong>The Godfather</strong></li>
@@ -49,7 +50,7 @@
                 <li>The lion king</li>
             </ol>
         </section>
-        <section>
+        <section class="form-section">
             <h2>Enter your favorite movie</h2>
             <p>help us build our community by sharing your favorite movie</p>
             <form action="/submit">
@@ -74,7 +75,6 @@
         <footer>
             <p>&copy; 2025 Movie Database</p><br/>
             <p>For more information, visit our <a href="https://www.imdb.com">IMDB</a> page</p>
-            
         </footer>
     </body>
 </html>
