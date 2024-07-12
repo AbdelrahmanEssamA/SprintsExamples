@@ -78,6 +78,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap:50px
 }
 
 .director-photo{
@@ -95,17 +96,30 @@ z-index: 1;
     max-width: 800px;
     padding: 0 20px;
     margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); 
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
 }
 
 .director-text h1 {
     font-size: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .director-text p {
+    text-align: left;
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    color:#FFB22C;
+}
+
+.bio p{
+    color:#fff;
 }
 
 .director-movies {
@@ -114,8 +128,9 @@ z-index: 1;
 }
 
 .director-movies h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: clamp(24px, 5vw, 36px); /* Responsive font size */
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .director-movies-container {
@@ -127,6 +142,12 @@ z-index: 1;
 .movie-item {
     width: 200px;
     margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.movie-item:hover {
+    transform: scale(.96); /* Slightly increase size */
 }
 
 .movie-item img {
