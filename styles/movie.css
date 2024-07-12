@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#fff;
+    background-color: #1c1c1c;
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur the background */
+    z-index: 1000;
+     
+ }
+ 
+ .main-header .logo{
+     font-size: 24px;
+     font-weight: bold;
+     a {     
+        color:#fff;
+        text-decoration: none;
+     }
+ }
+ 
+ nav ul{
+     list-style: none;
+     display: flex;
+     margin:0;
+     padding: 15px 30px 15px 15px;
+     li {
+         margin: 0 15px;
+     }
+ }
+ 
+ nav ul li a{
+   text-decoration: none;
+   color: #fff;
+   font-size: 18px;
+   transition: color 0.3s ease;
+ }
+ 
+ nav ul li a:hover{
+     color:#f39c12;
+ }
+
+ .movie-details {
+    position: relative;
+    height: 95vh;
+    background: url('../assets/cover.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color:#fff;
+    padding-left: 50px;
+ }
+ 
+ .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+ }
+
+ .movie-banner-info{
+    display: flex;
+    gap: 20px;
+ }
+
+ .movie-poster {
+    z-index: 1;
+    img{
+        width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.19); /* Box shadow */
+    }
+ }
+
+ .movie-text {
+    z-index: 1;
+    max-width: 600px;
+    h1{
+        font-size: 48px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 36px;
+        color:#ffb22c;
+        margin:10px 0;
+    }
+    p{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+ }
+.buttons{
+    margin:10px 0;
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border:none;
+        border-radius: 8px;
+        cursor:pointer;
+        transition: transform 0.3s;
+    }
+}
+
+.watch-now{
+    background-color: white;
+}
+
+.watch-now:hover{
+    transform: scale(0.90);
+}
+
+.watch-trailer{
+    background-color: transparent;
+    color:white;
+    transition: color 0.3s;
+}
+
+.watch-trailer:hover{
+    color:#ffb22c;
+}
+
+.description{
+    font-size: 16px;
+    line-height: 1.6;
+    margin: top 10px;
+    a{
+        color:#ffb22c;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}

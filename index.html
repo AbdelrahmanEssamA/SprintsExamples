@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Movie Database</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="main-header">
-           <div class="logo">Movie Database</div>
-           <nav>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">Movie Database</div>
+        <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#movies">Movies</a></li>
                 <li><a href="#directors">Directors</a></li>
             </ul>
-           </nav>
-        </header>
-        <section class="info-section">
-            <img class="cover-img" src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg"/>
-            <h2>Discover popular movies</h2>
-            <p>Explore our collection of timeless and blockbusters hits.<br/>
-            <i>find movies that captive and inspire</i></p>         
-            <p align="right">
-                Movie Database is your number 1 destination
-            </p>
-        </section>
-        <section class ='movie-section'>
-            <table class="movie-table">
-                <tr>
-                    <th>Title</th>
-                    <th>Director</th>
-                    <th>Year</th>
-                    <th>Genre</th>
-                </tr>
-                <tr>
-                    <td>Shawshank Redemption</td>
-                    <td>Frank Darabont</td>
-                    <td>1994</td>
-                    <td>Drama</td>
-                </tr>
-                <tr>
-                    <td>Godfather</td>
-                    <td>Francis Ford Coppola</td>
-                    <td>1972</td>
-                    <td>Crime</td>
-                </tr>
-            </table>
-        </section>
-        <section class="top-movies-section">
-            <h2>Top 5 movies</h2>
-            <ol>
-                <li><strong>The Godfather</strong></li>
-                <li>Shawshank Redemption</li>
-                <li>Godfather II</li>
-                <li>The Dark Knight</li>
-                <li>The lion king</li>
-            </ol>
-        </section>
-        <section class="form-section">
-            <h2>Enter your favorite movie</h2>
-            <p>help us build our community by sharing your favorite movie</p>
-            <form action="/submit">
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title" required/>
-                <label for="director">Director</label>
-                <input type="text" id="director" name="director" required/>
-                <label for="Genre">Genre</label>
-                <select id="Genre" name="Genre" required>
-                    <option value="action">Action</option>
-                    <option value="comedy">Comedy</option>
-                    <option value="horror">Horror</option>
-                    <option value="romance">Romance</option>
-                </select><br/>
-                <label for="release_date">Release Date</label>
-                <input type="date" id="release_date" name="release_date" required/>
-                <label for ='image'>Upload Image</label>
-                <input type="file" id="image" name="image">
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <footer>
-            <p>&copy; 2025 Movie Database</p><br/>
-            <p>For more information, visit our <a href="https://www.imdb.com">IMDB</a> page</p>
-        </footer>
-    </body>
+        </nav>
+    </header>
+    <section class="info-section">
+        <img class="cover-img" src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg" />
+        <h2>Discover popular movies</h2>
+        <p>Explore our collection of timeless and blockbusters hits.<br />
+            <i>find movies that captive and inspire</i>
+        </p>
+        <p align="right">
+            Movie Database is your number 1 destination
+        </p>
+    </section>
+    <section class='movie-section'>
+        <table class="movie-table">
+            <tr>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Year</th>
+                <th>Genre</th>
+            </tr>
+            <tr>
+                <td><a href="./pages/Movie.html">Oppenheimer</a></td>
+                <td>Frank Darabont</td>
+                <td>2023</td>
+                <td>Drama</td>
+            </tr>
+            <tr>
+                <td>Godfather</td>
+                <td>Francis Ford Coppola</td>
+                <td>1972</td>
+                <td>Crime</td>
+            </tr>
+        </table>
+    </section>
+    <section class="top-movies-section">
+        <h2>Top 5 movies</h2>
+        <ol>
+            <li><strong>The Godfather</strong></li>
+            <li>Shawshank Redemption</li>
+            <li>Godfather II</li>
+            <li>The Dark Knight</li>
+            <li>The lion king</li>
+        </ol>
+    </section>
+    <section class="form-section">
+        <h2>Enter your favorite movie</h2>
+        <p>help us build our community by sharing your favorite movie</p>
+        <form action="/submit">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required />
+            <label for="director">Director</label>
+            <input type="text" id="director" name="director" required />
+            <label for="Genre">Genre</label>
+            <select id="Genre" name="Genre" required>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+            </select><br />
+            <label for="release_date">Release Date</label>
+            <input type="date" id="release_date" name="release_date" required />
+            <label for='image'>Upload Image</label>
+            <input type="file" id="image" name="image">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Movie Database</p><br />
+        <p>For more information, visit our <a href="https://www.imdb.com">IMDB</a> page</p>
+    </footer>
+</body>
+
 </html>
 <!-- comment -->
