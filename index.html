@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Movie Database</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="logo">Movie Database</div> <!-- Navbar added here -->
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#movies">Movies</a></li>
+                <li><a href="./pages/Movies.html">Movies</a></li>
                 <li><a href="#directors">Directors</a></li>
             </ul>
         </nav>
     </header>
     <section class="info-section">
-        <img class="cover-img" src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg" alt="Movie Cover Image"/>
+        <img class="cover-img" src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg"
+            alt="Movie Cover Image" />
         <h2>Discover Popular Movies</h2>
-        <p>Explore our collection of timeless and blockbuster hits.<br/>
-        <i>Find movies that captivate and inspire</i></p>         
+        <p>Explore our collection of timeless and blockbuster hits.<br />
+            <i>Find movies that captivate and inspire</i>
+        </p>
         <p align="right">
             Movie Database is your number 1 destination
         </p>
@@ -62,26 +66,27 @@
         <p>Help us build our community by sharing your favorite movie</p>
         <form action="/submit">
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required/>
+            <input type="text" id="title" name="title" required />
             <label for="director">Director:</label>
-            <input type="text" id="director" name="director" required/>
+            <input type="text" id="director" name="director" required />
             <label for="genre">Genre:</label>
             <select id="genre" name="genre" required>
                 <option value="action">Action</option>
                 <option value="comedy">Comedy</option>
                 <option value="horror">Horror</option>
                 <option value="romance">Romance</option>
-            </select><br/>
+            </select><br />
             <label for="release_date">Release Date:</label>
-            <input type="date" id="release_date" name="release_date" required/>
+            <input type="date" id="release_date" name="release_date" required />
             <label for="image">Upload Image:</label>
             <input type="file" id="image" name="image">
             <button type="submit">Submit</button>
         </form>
     </section>
     <footer>
-        <p>&copy; 2025 Movie Database</p><br/>
+        <p>&copy; 2025 Movie Database</p><br />
         <p>For more information, visit our <a href="https://www.imdb.com">IMDB</a> page</p>
     </footer>
 </body>
+
 </html>
