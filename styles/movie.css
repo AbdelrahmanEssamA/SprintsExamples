@@ -265,8 +265,8 @@ nav ul li a:hover {
     }
 
     .movie-details {
-    display: block;
-    height: 50vh;
+        display: block;
+        height: 50vh;
     }
 
     .movie-banner-info {
@@ -292,15 +292,20 @@ nav ul li a:hover {
     }
 
     .movie-item {
-        margin-bottom: 50px;
-        width: 100%;
+        margin-bottom: 100px;
+        width: 600px
     }
+
+    .movie-info {
+        margin-top: -50px;
+    }
+    
     .movie-info h3 {
-        font-size: 24px;
+        font-size: 32px;
     }
     
     .movie-info p {
-        font-size: 18px;
+        font-size: 24px;
         color: #fff;
     }
     

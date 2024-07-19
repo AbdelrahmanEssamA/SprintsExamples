@@ -8,12 +8,14 @@
 </head>
 
 <body>
-    <header>
-        <a href="../index.html" class="logo">Movie Database</a>
+    <header class="main-header">
+        <div class="logo">Movie Database</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="./Movies.html">Movies</a></li>
+                <li><a href="./pages/Movies.html">Movies</a></li>
                 <li><a href="./Directors.html">Directors</a></li>
             </ul>
         </nav>
@@ -102,13 +104,6 @@
                     <p>Director: Christopher Nolan</p>
                 </div>
             </div>
-            <div class="movie-card card-cover">
-                <img src="../assets/cover.jpg" alt="Movie 1">
-                <div class="info">
-                    <p>Oppenheimer</p>
-                    <p>Director: Christopher Nolan</p>
-                </div>
-            </div>
             <div class="movie-card">
                 <img src="../assets/interstellar.jpg" alt="Movie 1">
                 <div class="info">
@@ -116,6 +111,14 @@
                     <p>Director: Christopher Nolan</p>
                 </div>
             </div>
+            <div class="movie-card card-cover">
+                <img src="../assets/cover.jpg" alt="Movie 1">
+                <div class="info">
+                    <p>Oppenheimer</p>
+                    <p>Director: Christopher Nolan</p>
+                </div>
+            </div>
+
         </div>
     </section>
     <footer>
