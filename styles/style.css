@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #1c1c1c;
@@ -26,6 +29,30 @@ body {
     text-decoration: none;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color:#fff
+}
+
+#menu-toggle{
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left:0;
+    width: 100%;
+    background-color: #333;
+}
+
+
 nav ul {
     list-style: none;
     display: flex;
@@ -43,6 +70,7 @@ nav ul li a {
     font-size: 18px;
     transition: color 0.3s ease;
 }
+
 .main-header nav ul li a:hover {
     color: #f39c12;
 }
@@ -126,5 +154,70 @@ footer{
     width: 100%;
     margin: 0;
 }
+
+@media (max-width:1024px) {
+
+    .menu-icon{
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        padding: 0;
+    }
+
+    nav ul li 
+    {
+        margin: 5px 0;
+    }
+
+    .info-section, .movie-section, .top-movies-section, .form-section{
+        margin: 40px 20px;
+        padding: 20px;
+        h2{
+            font-size: 18px;
+        
+        }
+        p, li{
+            font-size: 12px;
+        }
+    }
+    .info-section{
+        margin-top: 100px;
+    }   
+     
+}
+
+@media (max-width:800px) {
+    .movie-table th, .movie-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-section, .movie-section, .top-movies-section, .form-section{
+        margin: 10px;
+        padding:10px;
+    }
+    .info-section{
+        margin-top: 100px;
+    }
+    .movie-table th, .movie-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .form-section{
+        input, select, bottom {
+           font-size: 14px;
+        }
+    }
+    
+}
+
+
+
+
 
 
