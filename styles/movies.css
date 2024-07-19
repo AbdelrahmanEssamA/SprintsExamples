@@ -1,4 +1,7 @@
-/* Reset and basic styling */
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -32,7 +35,7 @@ nav ul {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 15px 30px 15px 15px;
+    padding: 15px 30px 15px 15px;    
 }
 
 nav ul li {
@@ -49,6 +52,29 @@ nav ul li a {
 nav ul li a:hover {
     color: #f39c12; /* Highlight color on hover */
 }
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 .intro-video {
     position: relative;
@@ -129,7 +155,7 @@ nav ul li a:hover {
 .grid-container {
     display: grid;
     padding: 60px 0;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 40px;
 }
 
@@ -142,9 +168,19 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
+.card-1{
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+}
+
+.card-cover{
+    grid-column: span 2;
+}
+
 .movie-card img {
     width: 100%;
-    max-height: 300px;
+    height: 100%;
     display: block;
     object-fit: cover;
     object-position: top;
@@ -176,3 +212,58 @@ footer {
     background-color: #333;
     color: white;
 }
+
+@media screen and (max-width: 1024px) {
+
+    .main-header .logo {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-overlay #movie-search {
+        width: 70%;
+    }
+
+    .intro-overlay{
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intro-overlay p {
+        font-size: 24px;
+    }
+
+    .streaming-services {
+        justify-content: center;
+        img{
+            width: 180px;
+        }
+    }
+
+    .intro-video {
+        height: 50vh;
+    }
+}
+
+
+

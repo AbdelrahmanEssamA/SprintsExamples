@@ -8,13 +8,15 @@
 </head>
 
 <body>
-    <header>
-        <a href="../index.html" class="logo">Movie Database</a>
+    <header class="main-header">
+        <div class="logo">Movie Database</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="./Movies.html">Movies</a></li>
-                <li><a href="#directors">Directors</a></li>
+                <li><a href="./pages/Movies.html">Movies</a></li>
+                <li><a href="./Directors.html">Directors</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +43,7 @@
     <section class="movie-listing">
         <h1>Movie Listings</h1>
         <div class="grid-container">
-            <div class="movie-card">
+            <div class="movie-card card-1">
                 <img src="https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/6408f6e7b5811271dc883aa8_batman-min.png"
                     alt="Movie 1">
                 <div class="info">
@@ -109,13 +111,14 @@
                     <p>Director: Christopher Nolan</p>
                 </div>
             </div>
-            <div class="movie-card">
-                <img src="../assets/poster.webp" alt="Movie 1">
+            <div class="movie-card card-cover">
+                <img src="../assets/cover.jpg" alt="Movie 1">
                 <div class="info">
                     <p>Oppenheimer</p>
                     <p>Director: Christopher Nolan</p>
                 </div>
             </div>
+
         </div>
     </section>
     <footer>

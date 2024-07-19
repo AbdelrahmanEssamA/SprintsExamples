@@ -1,0 +1,277 @@
+/* Reset and basic styling */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 15px 30px 15px 15px;    
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.intro-directors {
+    position: relative;
+    padding-top: 100px;
+}
+
+.intro-directors .big-img {
+    margin-left: 20px;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+}
+
+.intro-directors .illustration {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.intro-directors h1 {
+    background-color: rgba(191, 166, 0, 0.202); /* White background with 70% opacity */
+    backdrop-filter: blur(10px); /* Blur the background elements by 10px */
+    font-size: 48px;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 900px;
+}
+
+.director-listing {
+    padding: 100px 70px;
+}
+
+.director-listing h1 {
+    font-size: 48px;
+    color: #f39c12;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    padding: 100px 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 90px;
+}
+
+.director-card {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: #333;
+    padding: 10px;
+}
+
+.director-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: -50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 333;
+}
+
+.director-card .info {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.director-card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.director-card p {
+    font-size: 16px;
+}
+
+.director-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .intro-directors h1 {
+        font-size: 36px;
+        left: 600px;
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-directors .illustration {
+        top: 150px;
+        right: 50px;
+        width: 300px;
+    }
+
+    .intro-directors h1 {
+        font-size: 32px;
+        left: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-header .logo {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .intro-directors {
+        text-align: center;
+    }
+
+    .intro-directors .big-img,
+    .intro-directors .illustration {
+        position: static;
+        margin: 10px auto;
+        width: 90%;
+    }
+    .illustration{
+        display: none;
+    }
+
+    .intro-directors h1 {
+        position: relative;
+        margin-top: -40px;
+        left: auto;
+        font-size: 28px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .header, .footer, .director-listing {
+        padding: 20px;
+    }
+
+    .director-listing h1 {
+        font-size: 32px;
+    }
+
+    .grid-container {
+        gap: 20px;
+    }
+
+    .director-card img {
+        height: 150px;
+    }
+
+    .director-card h2 {
+        font-size: 20px;
+    }
+
+    .director-card p {
+        font-size: 14px;
+    }
+}

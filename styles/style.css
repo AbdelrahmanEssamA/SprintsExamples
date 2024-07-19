@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #1c1c1c;
@@ -26,6 +30,28 @@ body {
     text-decoration: none;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -43,82 +69,86 @@ nav ul li a {
     font-size: 18px;
     transition: color 0.3s ease;
 }
+
 .main-header nav ul li a:hover {
     color: #f39c12;
 }
 
+.info-section, .movie-section, .top-movies-section, .form-section {
+    margin: 30px 300px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow with slight blur */
+    border: none;
+}
 
-.info-section, .movie-section, .top-movies-section, .form-section{
-  margin: 30px 300px;
-  padding:40px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow with slight blur */
-  border: none;
-  h2 {
-    color:#333;
-  }
+.info-section {
+    margin-top: 100px;
 }
-.info-section{
-   margin-top: 100px;
-}
-.cover-img{
+
+.cover-img {
     margin: 0 auto;
     border-radius: 10px;
     width: 100%;
 }
 
-.movie-table{
+.movie-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    th, td {
-     padding: 10px;
-     border-bottom: 1px solid #e7e7e7;
-     text-align: center;
-     a{
-        text-decoration: none;
-     }
-    }
-    th{
-        background-color: #f2f2f2;
-    }
 }
 
-.top-movies-section li{
-    padding :5px;
+.movie-table th, .movie-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    text-align: center;
 }
 
-.form-section{
-    /* TODO: Explain flex */
-    form {
-        display:flex;
-        flex-direction:column;
-    };
-    input, select, bottom {
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    };
-    label{
-        margin:10px 5px;
-    }
-    button{
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 12px;
-        cursor: pointer;
-        border-radius: 4px;
-        font-weight: 600;
-    }
-    button:hover{
-        background-color: #555;
-        transition: background-color 0.3s;
-    }
+.movie-table th {
+    background-color: #f2f2f2;
 }
-footer{
+
+.movie-table a {
+    text-decoration: none;
+}
+
+.top-movies-section li {
+    padding: 5px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section input, .form-section select, .form-section button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-section label {
+    margin: 10px 5px;
+}
+
+.form-section button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.form-section button:hover {
+    background-color: #555;
+    transition: background-color 0.3s;
+}
+
+footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -127,4 +157,62 @@ footer{
     margin: 0;
 }
 
+@media (max-width:1024px){
+    .info-section, .movie-section, .top-movies-section, .form-section {
+        margin: 20px;
+        padding: 20px;
+    }
+    .info-section {
+        margin-top: 100px;
+    }
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
 
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .movie-table th, .movie-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .info-section, .movie-section, .top-movies-section, .form-section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .info-section {
+        margin-top: 100px;
+    }
+
+    .movie-table th, .movie-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .form-section input, .form-section select, .form-section button {
+        font-size: 14px;
+    }
+}
