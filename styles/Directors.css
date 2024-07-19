@@ -1,4 +1,8 @@
 /* Reset and basic styling */
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -20,7 +24,6 @@ header {
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
-
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -32,7 +35,7 @@ nav ul {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 15px 30px 15px 15px;
+    padding: 15px 30px 15px 15px;    
 }
 
 nav ul li {
@@ -50,32 +53,58 @@ nav ul li a:hover {
     color: #f39c12; /* Highlight color on hover */
 }
 
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .intro-directors {
     position: relative;
-    padding-top:100px;
-    .big-img{
-        margin-left: 20px;
-        width: 1000px;
-        border-radius: 8px;
-    }
-    .illustration{
-        position: absolute;
-        top: 200px;
-        right:100px;
-        width: 500px;
-        border-radius: 8px;
-    }
+    padding-top: 100px;
+}
 
-    h1{
-        background-color: rgba(191, 166, 0, 0.202); /* White background with 70% opacity */
-        backdrop-filter: blur(10px); /* Blur the background elements by 10px */
-        font-size: 48px;
-        padding: 20px;
-        border-radius: 5px; 
-        position: absolute;
-        bottom:0px;
-        left: 900px;
-    }
+.intro-directors .big-img {
+    margin-left: 20px;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+}
+
+.intro-directors .illustration {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.intro-directors h1 {
+    background-color: rgba(191, 166, 0, 0.202); /* White background with 70% opacity */
+    backdrop-filter: blur(10px); /* Blur the background elements by 10px */
+    font-size: 48px;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 900px;
 }
 
 .director-listing {
@@ -90,7 +119,7 @@ nav ul li a:hover {
 
 .grid-container {
     display: grid;
-    padding: 100px 0px ;
+    padding: 100px 0;
     grid-template-columns: repeat(4, 1fr);
     gap: 90px;
 }
@@ -142,4 +171,106 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .intro-directors h1 {
+        font-size: 36px;
+        left: 600px;
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-directors .illustration {
+        top: 150px;
+        right: 50px;
+        width: 300px;
+    }
+
+    .intro-directors h1 {
+        font-size: 32px;
+        left: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-header .logo {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .intro-directors {
+        text-align: center;
+    }
+
+    .intro-directors .big-img,
+    .intro-directors .illustration {
+        position: static;
+        margin: 10px auto;
+        width: 90%;
+    }
+    .illustration{
+        display: none;
+    }
+
+    .intro-directors h1 {
+        position: relative;
+        margin-top: -40px;
+        left: auto;
+        font-size: 28px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .header, .footer, .director-listing {
+        padding: 20px;
+    }
+
+    .director-listing h1 {
+        font-size: 32px;
+    }
+
+    .grid-container {
+        gap: 20px;
+    }
+
+    .director-card img {
+        height: 150px;
+    }
+
+    .director-card h2 {
+        font-size: 20px;
+    }
+
+    .director-card p {
+        font-size: 14px;
+    }
 }

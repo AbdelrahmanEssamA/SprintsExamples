@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #1c1c1c;
@@ -167,7 +171,7 @@ footer {
     .menu-icon {
         display: block;
         position: absolute;
-        right: 70px;
+        right: 30px;
     }
 
     nav ul {
