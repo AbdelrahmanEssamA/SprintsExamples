@@ -1,4 +1,8 @@
 /* Reset and basic styling */
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -7,7 +11,8 @@ body, html {
     color: #fff;
 }
 
-header {
+
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,12 +26,36 @@ header {
     z-index: 1000;
 }
 
-.logo {
+.main-header .logo {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
 }
+
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color:#fff
+}
+
+#menu-toggle{
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left:0;
+    width: 100%;
+    background-color: #333;
+}
+
 
 nav ul {
     list-style: none;
@@ -46,8 +75,8 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #f39c12; /* Highlight color on hover */
+.main-header nav ul li a:hover {
+    color: #f39c12;
 }
 
 .director-details {
@@ -179,4 +208,41 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+}
+
+@media (max-width:1024px){
+    .menu-icon{
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        padding: 0;
+    }
+
+    nav ul li 
+    {
+        margin: 5px 0;
+    }
+    .director-info{
+        flex-direction: column;
+    }
+    .director-photo img{
+        width: 350px;
+
+    }
+    .director-text p {
+        font-size: 24px;
+    }
+    .movie-item {
+        width: 600px;
+    }
+    .movie-info h3 {
+        font-size: 32px;
+    }
+    .movie-info p {
+        font-size: 24px;
+    }
 }
