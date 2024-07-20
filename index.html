@@ -9,87 +9,57 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="logo">Movie Database</div>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./pages/Movies.html">Movies</a></li>
-                <li><a href="./pages/Directors.html">Directors</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="info-section">
-        <img class="cover-img" src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg"
-            alt="Movie Cover Image" />
-        <h2>Discover Popular Movies</h2>
-        <p>Explore our collection of timeless and blockbuster hits.<br />
-            <i>Find movies that captivate and inspire</i>
-        </p>
-        <p align="right">
-            Movie Database is your number 1 destination
-        </p>
-    </section>
-    <section class="movie-section">
-        <table class="movie-table">
-            <tr>
-                <th>Title</th>
-                <th>Director</th>
-                <th>Year</th>
-                <th>Genre</th>
-            </tr>
-            <tr>
-                <td><a href="pages/movie.html?id=1">Oppenheimer</a></td>
-                <td><a href="pages/director.html?id=1">Christopher Nolan</a></td>
-                <td>2023</td>
-                <td>Drama</td>
-            </tr>
-            <tr>
-                <td><a href="movie.html?id=1">The Godfather</a></td>
-                <td><a href="director.html?name=francis-ford-coppola">Francis Ford Coppola</a></td>
-                <td>1972</td>
-                <td>Crime</td>
-            </tr>
-        </table>
-    </section>
-    <section class="top-movies-section">
-        <h2>Top 5 Movies</h2>
-        <ol>
-            <li><strong>The Godfather</strong></li>
-            <li>The Shawshank Redemption</li>
-            <li>The Godfather Part II</li>
-            <li>The Dark Knight</li>
-            <li>The Lion King</li>
-        </ol>
-    </section>
-    <section class="form-section">
-        <h2>Enter Your Favorite Movie</h2>
-        <p>Help us build our community by sharing your favorite movie</p>
-        <form action="/submit">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required />
-            <label for="director">Director:</label>
-            <input type="text" id="director" name="director" required />
-            <label for="genre">Genre:</label>
-            <select id="genre" name="genre" required>
-                <option value="action">Action</option>
-                <option value="comedy">Comedy</option>
-                <option value="horror">Horror</option>
-                <option value="romance">Romance</option>
-            </select><br />
-            <label for="release_date">Release Date:</label>
-            <input type="date" id="release_date" name="release_date" required />
-            <label for="image">Upload Image:</label>
-            <input type="file" id="image" name="image">
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2025 Movie Database</p><br />
-        <p>For more information, visit our <a href="https://www.imdb.com">IMDB</a> page</p>
-    </footer>
+    <main>
+        <div class="overlay"></div>
+        <aside class="sidebar">
+            <div class="user-info">
+                <div class="main-info">
+                    <img src="https://www.svgrepo.com/show/384676/account-avatar-profile-user-6.svg" alt="user">
+                    <div class="text">
+                        <div class="name">John, Doe</div>
+                        <div class="phone">+9343455</div>
+                    </div>
+                </div>
+                <div class="sub-info">
+                    <h3>Balance</h3>
+                    <p>$45.43</p>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-item">Home</li>
+                    <li class="menu-item">Favorite</li>
+                    <li class="menu-item">Food and Drinks</li>
+                    <li class="menu-item">Reminder</li>
+                </ul>
+                <div class="logout">Logout</div>
+        </aside>
+        <section class="content">
+            <div class="header-img"></div>
+            <div class="movies">
+                <div class="movie-card">
+                    <div class="movie-img"></div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-img"></div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-img"></div>
+                </div>
+                <div class="movie-card">
+                    <div class="movie-img"></div>
+                </div>
+            </div>
+            <div class="food-and-drinks">
+                <div class="item"></div>
+                <div class="item"></div>
+
+            </div>
+        </section>
+        <section class="reservation">
+            <div class="screen"></div>
+            <div class="ticket"></div>
+        </section>
+    </main>
+
 </body>
 
 </html>
